@@ -26,8 +26,6 @@ VUE.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Sc
 Keep.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Keep.js,type=http-response,pattern=^https:\/\/api\.gotokeep\.com\/(.+\/subject|.+\/dynamic)
 # =Face解锁=
 FaceApp.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/FaceApp.js,type=http-response,pattern=^https?:\/\/api\.faceapp\.io(.*)\/api\/v.*\/auth\/user\/credentials
-# =NiChi解锁素材=
-NiChi.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/NiChi.js,type=http-response,pattern=^https?:\/\/mp\.bybutter\.com\/mood\/(official-templates|privileges)
 # =PicsArt美易 pro=
 PicsArt.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/PicsArt.js,type=http-response,pattern=^https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json
 # =Termius解锁pro=
@@ -67,4 +65,4 @@ XMind.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.
 
 
 [MITM]
-hostname = trade-acs.m.taobao.com, api.m.jd.com, ios.prod.ftl.netflix.com,  splice.oracle.*.com, vsco.co, p.du.163.com, biz.caiyunapp.com, ap*.intsig.net, api.vuevideo.net, api.picsart.c*, api.gotokeep.com, api.faceapp.io, mp.bybutter.com, api.picsart.c*, api.meiease.c*, api.termius.com, api.gyrosco.pe, api1.dobenge.cn, newdrugs.dxy.cn, api.shimo.im, avoscloud.com, billing.peakcloud.org, *.kuwo.cn, vip1.kuwo.cn, apic.musixmatch.com, api.keepkeep.com, account.wps.*, api.interpreter.caiyunai.com, planner5d.com, dayone.me, api.ithome.com, www.xmind.cn
+hostname = trade-acs.m.taobao.com, api.m.jd.com, ios.prod.ftl.netflix.com,  splice.oracle.*.com, vsco.co, p.du.163.com, biz.caiyunapp.com, ap*.intsig.net, api.vuevideo.net, api.picsart.c*, api.gotokeep.com, api.faceapp.io, api.meiease.c*, api.termius.com, api.gyrosco.pe, api1.dobenge.cn, newdrugs.dxy.cn, api.shimo.im, avoscloud.com, billing.peakcloud.org, *.kuwo.cn, vip1.kuwo.cn, apic.musixmatch.com, api.keepkeep.com, account.wps.*, api.interpreter.caiyunai.com, planner5d.com, dayone.me, api.ithome.com, www.xmind.cn
