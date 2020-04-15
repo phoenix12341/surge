@@ -1,0 +1,8 @@
+#!name=迷路的猫之surge挂起模块·By大神
+#!desc=该模块用于切换WiFi + proxy
+#!system=ios
+
+# =WiFi=
+wifi-proxy.js = debug=1,script-path=https://raw.githubusercontent.com/phoenix12341/surge/master/wifi-proxy.js,type=event=network-changed
+
+ 
