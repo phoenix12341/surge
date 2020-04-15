@@ -2,6 +2,8 @@
 #!desc=该模块用于切换WiFi + proxy
 #!system=ios
 
+
+[Script]
 # =WiFi=
 wifi-proxy.js = debug=1,script-path=https://raw.githubusercontent.com/phoenix12341/surge/master/wifi-proxy.js,type=event=network-changed
 
