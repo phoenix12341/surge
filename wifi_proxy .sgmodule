@@ -1,0 +1,6 @@
+#!name=wifi_proxy 
+#!desc= SSID,Weather
+#!system=ios
+
+[Script]
+event network-changed debug=1,script-path=wifi_proxy.js
