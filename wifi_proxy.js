@@ -1,15 +1,3 @@
-/* wifi_proxy change (Made by Meeta)
-文本编辑模式下复制粘贴,TG频道已发操作教程视频
-event network-changed debug=1,script-path=wifi_proxy.js
-PS:记得自己修改WIFI名称
-主要功能:指定Wi-Fi(路由器翻)下,Surge使用直连模式,其他网络下Surge使用规则模式
-虽然设置SSID可以达到基本相同功能
-使用脚本,Surge不会被suspend
-Rewrite和Scripting依然有效
-TG频道:@meetashare
-*/
-
-
 
 var wifiname = $network.wifi.ssid;
 var proxywifi = "rty3dfgtru45_5G";
