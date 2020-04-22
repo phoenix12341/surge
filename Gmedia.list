@@ -1,0 +1,52 @@
+# > Fox+
+USER-AGENT,FOX%20NOW*
+DOMAIN-SUFFIX,fox.com
+DOMAIN-SUFFIX,foxdcg.com
+DOMAIN-SUFFIX,theplatform.com
+DOMAIN-SUFFIX,uplynk.com
+
+# > HBO GO HKG
+USER-AGENT,HBO%20GO%20PROD%20HKG*
+DOMAIN-SUFFIX,hbogoasia.com
+DOMAIN-SUFFIX,hbogoasia.hk
+DOMAIN,bcbolthboa-a.akamaihd.net
+DOMAIN,players.brightcove.net
+DOMAIN,s3-ap-southeast-1.amazonaws.com
+DOMAIN,dai3fd1oh325y.cloudfront.net
+DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com
+DOMAIN,hboasia1-i.akamaihd.net
+DOMAIN,hboasia2-i.akamaihd.net
+DOMAIN,hboasia3-i.akamaihd.net
+DOMAIN,hboasia4-i.akamaihd.net
+DOMAIN,hboasia5-i.akamaihd.net
+DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net
+
+# > Spotify
+USER-AGENT,Spotify*
+DOMAIN-SUFFIX,pscdn.co
+DOMAIN-SUFFIX,scdn.co
+DOMAIN-SUFFIX,spotify.com
+DOMAIN-SUFFIX,spoti.fi
+DOMAIN-KEYWORD,spotify.com
+DOMAIN-KEYWORD,-spotify-com
+
+# > TIDAL
+USER-AGENT,TIDAL*dia
+DOMAIN-SUFFIX,tidal.comdia
+
+# > Viu(TV)
+USER-AGENT,Viu*
+USER-AGENT,ViuTV*
+DOMAIN-SUFFIX,viu.com
+DOMAIN-SUFFIX,viu.tv
+DOMAIN,api.viu.now.com
+DOMAIN,d1k2us671qcoau.cloudfront.net
+DOMAIN,d2anahhhmp1ffz.cloudfront.net
+DOMAIN,dfp6rglgjqszk.cloudfront.net
+
+# > YouTube
+USER-AGENT,com.google.ios.youtube*
+USER-AGENT,YouTube*
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,youtube.com
+DOMAIN,youtubei.googleapis.com
