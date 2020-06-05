@@ -21,15 +21,6 @@ DOMAIN,hboasia4-i.akamaihd.net
 DOMAIN,hboasia5-i.akamaihd.net
 DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net
 
-# > Spotify
-USER-AGENT,Spotify*
-DOMAIN-SUFFIX,pscdn.co
-DOMAIN-SUFFIX,scdn.co
-DOMAIN-SUFFIX,spotify.com
-DOMAIN-SUFFIX,spoti.fi
-DOMAIN-KEYWORD,spotify.com
-DOMAIN-KEYWORD,-spotify-com
-
 # > TIDAL
 USER-AGENT,TIDAL*dia
 DOMAIN-SUFFIX,tidal.comdia
