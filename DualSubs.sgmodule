@@ -1,0 +1,44 @@
+#!name=DualSubs for Streaming Media
+#!desc=流媒体平台字幕增强及双语模块
+#!openUrl=http://boxjs.com/#/app/DualSubs.Universal
+#!author=VirgilClyne
+#!homepage=https://github.com/DualSubs
+#!manual=https://github.com/DualSubs/DualSubs/wiki/🍿-DualSubs-for-🎦-Streaming-Media
+#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
+
+[General]
+force-http-engine-hosts = %APPEND% *.hls.row.aiv-cdn.net, *avodhlss3ww-a.akamaihd.net, d25xi40x97liuc.cloudfront.net, dmqdd6hw24ucf.cloudfront.net, d22qjgkvxw22r6.cloudfront.net, d1v5ir2lpwr8os.cloudfront.net, d27xxe7juh1us6.cloudfront.net, assets.huluim.com, vod-*.live.cf.md.bbci.co.uk, vod-*-live.akamaized.net
+
+[Script]
+
+DualSubs.Disney+.HLS.Main.m3u8 = type=http-response, pattern=^https?:\/\/(.+)\.media\.(dssott|starott)\.com\/ps01\/disney\/([0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12})\/(cbcs|ctr)-all-(.+)\.m3u8(\?.+)?$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.HLS.Main.m3u8.js
+DualSubs.Disney+.HLS.WebVTT.m3u8 = type=http-response, pattern=^https?:\/\/(.+)\.media\.(dssott|starott)\.com\/ps01\/disney\/([0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12})\/r\/(.+)\.m3u8(\?.*dualsubs=\w+)$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.HLS.WebVTT.m3u8.js
+DualSubs.Disney+.SUB.WebVTT = type=http-response, pattern=^https?:\/\/(.+)\.media\.(dssott|starott)\.com\/ps01\/disney\/([0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12})\/(.+)\.vtt(\?.*dualsubs=\w+)$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.SUB.WebVTT.js
+
+DualSubs.Prime_Video.HLS.Main.m3u8 = type=http-response, pattern=^https?:\/\/(.+)\.(hls\.row\.aiv-cdn|akamaihd)\.net\/(.+)\/([0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12})\.m3u8(\?.+)?$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.HLS.Main.m3u8.js
+DualSubs.Prime_Video.HLS.WebVTT.m3u8 = type=http-response, pattern=^https?:\/\/(.+)\.cloudfront\.net\/(.+)\/([0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12})\.m3u8(\?.*dualsubs=\w+)$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.HLS.WebVTT.m3u8.js
+DualSubs.Prime_Video.SUB.WebVTT = type=http-response, pattern=^https?:\/\/(.+)\.cloudfront\.net\/(.+)\/([0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12})\.vtt(\?.*dualsubs=\w+)$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.SUB.WebVTT.js
+
+DualSubs.HBO_Max.HLS.Main.m3u8 = type=http-response, pattern=^https?:\/\/manifests(\.v2)?\.api\.hbo\.com\/hls\.m3u8(\?.+)?$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.HLS.Main.m3u8.js
+DualSubs.HBO_Max.HLS.WebVTT.m3u8 = type=http-response, pattern=^https?:\/\/manifests(\.v2)?\.api\.hbo\.com\/hlsMedia\.m3u8(\?.*dualsubs=\w+)$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.HLS.WebVTT.m3u8.js
+DualSubs.HBO_Max.SUB.WebVTT = type=http-response, pattern=^https?:\/\/(.+)\.hbomaxcdn\.com\/videos\/(.+)\.vtt(\?.*dualsubs=\w+)$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.SUB.WebVTT.js
+
+DualSubs.Hulu.HLS.Main.m3u8 = type=http-response, pattern=^https?:\/\/manifest-dp\.hulustream\.com\/hls\/(\d+)\.m3u8(\?.+)?$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.HLS.Main.m3u8.js
+DualSubs.Hulu.HLS.WebVTT.m3u8 = type=http-response, pattern=^https?:\/\/manifest-dp\.hulustream\.com\/webvtt(\?.*dualsubs=\w+)$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.HLS.WebVTT.m3u8.js
+DualSubs.Hulu.SUB.WebVTT = type=http-response, pattern=^https?:\/\/(assets\.huluim\.com|assetshuluimcom-a\.akamaihd\.net)\/captions_webvtt\/(.+[^blank])\.vtt(\?.*dualsubs=\w+)$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.SUB.WebVTT.js
+
+DualSubs.Paramount+.HLS.Main.m3u8 = type=http-response, pattern=^https?:\/\/(vod-(.+)|(.+)\.airspace-(.+)|(.+)-pplus)\.(cbsaavideo|cbsivideo|cbs)\.com\/(.+)\/(master|manifest)\.m3u8(\?.+)?$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.HLS.Main.m3u8.js
+DualSubs.Paramount+.HLS.WebVTT.m3u8 = type=http-response, pattern=^https?:\/\/(vod-(.+)|(.+)\.airspace-(.+)|(.+)-pplus)\.(cbsaavideo|cbsivideo|cbs)\.com\/(.+)\/(stream_vtt|manifest_.*)\.m3u8(\?.*dualsubs=\w+)$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.HLS.WebVTT.m3u8.js
+DualSubs.Paramount+.SUB.WebVTT = type=http-response, pattern=^https?:\/\/(vod-(.+)|(.+)\.airspace-(.+)|(.+)-pplus)\.(cbsaavideo|cbsivideo|cbs)\.com\/(.+)\.vtt(\?.*dualsubs=\w+)$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.SUB.WebVTT.js
+DualSubs.Paramount+.SUB.WebVTT = type=http-response, pattern=^https?:\/\/cc\.cbs\.com\/closedcaption\/(.+)\.vtt(\?.*dualsubs=\w+)$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.SUB.WebVTT.js
+
+DualSubs.Discovery+.HLS.Main.m3u8 = type=http-response, pattern=^https?:\/\/content-discovery\.uplynk\.com\/(.+)\.m3u8(\?.+)?$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.HLS.Main.m3u8.js
+
+DualSubs.Discovery+_Ph.HLS.Main.m3u8 = type=http-response, pattern=^https?:\/\/dplus-ph-(prod-vod\.akamaized\.net|google-v2\.prod-vod\.h264\.io)\/(.+)\/master\.m3u8(\?.+)?$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.HLS.Main.m3u8.js
+DualSubs.Discovery+_Ph.HLS.WebVTT.m3u8 = type=http-response, pattern=^https?:\/\/dplus-ph-(prod-vod\.akamaized\.net|google-v2\.prod-vod\.h264\.io)\/(.+)\/captions\.m3u8(\?.*dualsubs=\w+)$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.HLS.WebVTT.m3u8.js
+DualSubs.Discovery+_Ph.SUB.WebVTT = type=http-response, pattern=^https?:\/\/dplus-ph-(prod-vod\.akamaized\.net|google-v2\.prod-vod\.h264\.io)\/(.+)\.vtt(\?.*dualsubs=\w+)$, requires-body=1, max-size=0, timeout=30, script-path=https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.SUB.WebVTT.js
+
+
+[MITM]
+hostname = *.media.dssott.com, *.media.starott.com, atv-ps.amazon.com, atv-ps-fe.primevideo.com, *.hls.row.aiv-cdn.net, *.dash.row.aiv-cdn.net, cf-timedtext.aux.pv-cdn.net, *avodhlss3ww-a.akamaihd.net, d25xi40x97liuc.cloudfront.net, dmqdd6hw24ucf.cloudfront.net, d22qjgkvxw22r6.cloudfront.net, d1v5ir2lpwr8os.cloudfront.net, d27xxe7juh1us6.cloudfront.net, manifests.api.hbo.com, manifests.v2.api.hbo.com, *.hbomaxcdn.com, manifest-dp.hulustream.com, livemanifest-f.hulustream.com, live-sc.hulustream.com, assets.huluim.com, assetshuluimcom-a.akamaihd.net, link.theplatform.com, *-pplus.cbs.com, vod-*.cbsaavideo.com, vod-*.cbsivideo.com, *.airspace-*.cbsivideo.com, content-discovery.uplynk.com, *-discovery1.uplynk.com, x-default-stgec.uplynk.com, dplus-ph-prod-vod.akamaized.net, dplus-ph-google-v2.prod-vod.h264.io
+tcp-connection = true
